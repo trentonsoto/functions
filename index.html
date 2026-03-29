@@ -19,6 +19,28 @@
 		</header>
 
 		<main>
+            <h1>Forms, Params, and Storage</h1>
+		<!-- New element, who dis: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form -->
+		<form id="some-form">
+			<section>
+				<!-- Visible/accessible `label` connected through the `id`: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label -->
+				<label for="some-text">This is a basic text <code>&lt;input&gt;</code>:</label>
+				<!-- Different types can control what is allowed: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
+				<input id="some-text" name="some-text" placeholder="Some suggested text" required type="text">
+			</section>
+			<section>
+				<label for="some-option">And a dropdown <code>&lt;select&gt;</code>:</label>
+				<!-- Classic “dropdown”: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select -->
+				<select id="some-option" name="some-option">
+						<option>With options</option>
+						<option>Inside here</option>
+						<option>To select</option>
+						<optgroup label="Grouped">
+							<option>You can organize</option>
+							<option>Options in groups</option>
+						</optgroup>
+				</select>
+			</section>
 		</main>
 
 

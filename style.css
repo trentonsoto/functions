@@ -1,5 +1,5 @@
 /* Some basics to make it easier to read. */
-body {
+main {
 	--spacing: 2em;
 
 	display: grid;
