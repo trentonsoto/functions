@@ -5,7 +5,23 @@ let formElement = document.querySelector('#some-form')
 
 
 
-
+function getSongs () {
+	let stored = localStorage.getItem('songs')
+	// IN LOCAL STORAGE, FIND 'songs" AND SAVE IT TO SOMETHING CALLED "stored"
+	// Before saving my new song, I need to grab the old songs that are already in local storage, so I can add to them instead of replacing them / overwriting them like they currently were doing
+	// https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+	if (stored) {
+		return JSON.parse(stored)
+		// https://youtu.be/E2rvDpubmnA?si=BOzBTqaqrALChYu0
+		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
+		// I needed this to behave like an array (like you guys have mentioned in my feedback). I understand that .parse converts a JSON string to an object or an array so it can be read better
+	}
+	else {
+		return []
+		// If there is nothing in local storage, I want to return an empty array so that I can add songs to it without getting an error or undefined.
+	}
+	// This function helps me get the songs that are already in local storage so I can add them instead of replacing them when I save something new. And at the end, if nothing exists, then it can return an empty array without an error
+}
 
 
 
