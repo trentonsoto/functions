@@ -61,8 +61,10 @@ function showSongs () {
 		songList.innerHTML += `
 		<div class="song-entry">
 		<h3>${song.title}</h3> <p>${song.genre}</p> <p>${song.beat}</p> <p>${song.lyrics}</p>
+		<button onClick="deleteSong(${song.id})">Delete</button>
 		</div>
 		`
+		// for each song and its entry and information, this button is added so when its clicked, the function deleteSong will know which song to delete based on the id created and used here "song.id"
 	})
 	// WILL COME BACK TO THIS WHEN THE TIME IS RIGHT. STILL NOT SURE ABOUT THIS ONE. MIGHT NEED TO REWRITE IT TO BE MORE SPECIFIC ABOUT WHAT IT IS SHOWING.
 }
@@ -85,6 +87,10 @@ formElement.addEventListener('submit', (event) => {
 	// this takes the inputs and saves it to formData
 	const song = {
 		// this is a new object that I will call song because I am saving songs to local storage
+		id: Date.now(),
+		// this will give my song entries a unique id based on when they were created, so to my understanding, two songs will not have the same id because they will be created at different times.
+		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now
+		// I used this to hopefully get a unique id for each entry so that I can delete them or edit them later on
 		title:formData.get('some-text') || '',
 		// this targets what I put into the title text field
         genre:formData.get('some-option') || '',
