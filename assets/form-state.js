@@ -8,7 +8,7 @@ let stateCallback = undefined
 
 
 
-
+// LOOKING FOR PARAMATERS WE HAVE, WILL LOAD THEM INTO PAGE
 // Function to match the form to URL/stored params.
 let updateForm = (params) => {
 	// Parse into params:
@@ -46,7 +46,7 @@ let updateForm = (params) => {
 
 
 
-
+// TAKING PARAMETERS AND SAVING THEM TO LOCAL STORAGE
 // Function to save them to `localStorage`.
 let storeParams = () => {
 	// Get the form data:
@@ -65,7 +65,7 @@ let storeParams = () => {
 
 
 
-
+// TAKING WHAT I PUT IN SEARCH FIELD, SELECTED, SELECTED DATA, ITS UPDATING URL PARAMETERS. TAKING FORM DATA AND TURNING IT INTO URL SEARCH PARAMETERS. STORING THEM, AND EMPTY CALL BACK FUNCTION. UPDATING URL AT TOP, WHEN RELOADING, SAME PARAMETERS.
 // Function to update the URL from the form.
 let updateUrlParams = () => {
 	let formParams = new FormData(formElement) // Get the form data.
@@ -116,11 +116,13 @@ else if (localStorage.length > 0) {
 
 // Watch for events!
 formElement.addEventListener('submit', (event) => {
+	// PREVENT FROM REFRESHING THE PAGE ON SUBBMITTING THE FORM. STATIC HOST, NO SERVER
 	// Don’t actually submit (which would refresh the page):
 	// https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
 	event.preventDefault()
 })
 
+// EVERY SINGLE TIME ITS CHANGED, ITS FIRING AN EVENT
 // Run any time the form is modified:
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/input_event
 formElement.addEventListener('input', () => {
