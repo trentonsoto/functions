@@ -1,7 +1,3 @@
-// Disclosure: Look at the watch for events section at the bottom. 
-
-
-
 // Target your form.
 let formElement = document.querySelector('#some-form')
 // let stateCallback = undefined
@@ -83,34 +79,67 @@ formElement.addEventListener('submit', (event) => {
 
 	// *********************************************************************
 	// For this part, I used the built in chat to help me understand how to get my three functions to behave together. I understand that I need to get the data, save it, and then display it. It helped me understand the concept and how to connect my functions together. I used it as a learning aid to understand the structure. I added comments to show my understanding. 
-	const formData= new FormData(formElement)
+	// const formData= new FormData(formElement)
 	// this takes the inputs and saves it to formData
+	// removed this because I swtiched to document.querySelector for my input
+
+
+
 	const song = {
 		// this is a new object that I will call song because I am saving songs to local storage
 		id: Date.now(),
 		// this will give my song entries a unique id based on when they were created, so to my understanding, two songs will not have the same id because they will be created at different times.
 		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now
 		// I used this to hopefully get a unique id for each entry so that I can delete them or edit them later on
-		title:formData.get('some-text') || '',
+		// I swtiched these from formData.get('title') to document.querySelector because this is what I learned through class. I had kept the formData.get in there to show that I understand how to use it, but I switched it to document.querySelector because this is what I learned through class and I understand how to use it better.
+		title:document.querySelector('#some-text').value,
 		// this targets what I put into the title text field
-        genre:formData.get('some-option') || '',
+        genre:document.querySelector('#some-option').value,
 		// this targets what I put into the genre input field
-        beat:formData.get('beat-link') || '',
+        beat:document.querySelector('#beat-link').value,
 		// this targets what I put into the beat text field
-        lyrics:formData.get('lyric-notes') || ''
+        lyrics:document.querySelector('#lyric-notes').value,
 		// this targets what I put into the lyric text field
 	}
-	const songs = getSongs()
+
+
+
+
+
+	//******************************************************* 
+	// this is the part where I connect my functions together (old method from chats help). I rewrote it in the way that I learned and understand and commented it out, and the new version is at the bottom. 
+
+
+	// const songs = getSongs()
+	// // this will get the songs that are already in local storage so I can add to them instead of replacing them. I tested it out and it adds to it instead of replacing it!
+    // songs.push(song)
+	// // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
+	// // the push adds new entries to the end of the array, so it will add my new song entries at the end of the list and not replace them 
+    // saveSongs(songs)
+	// // this will save the songs to the local storage for me and update the list
+    // showSongs()
+	// // this will show all the songs on the page for me
+    // formElement.reset()
+	// // this will clear the form inputs for a new session
+
+
+	// ********************************************************
+
+
+
+
+	let mySongs = getSongs()
 	// this will get the songs that are already in local storage so I can add to them instead of replacing them. I tested it out and it adds to it instead of replacing it!
-    songs.push(song)
+	mySongs.push(song)
 	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 	// the push adds new entries to the end of the array, so it will add my new song entries at the end of the list and not replace them 
-    saveSongs(songs)
-	// this will save the songs to the local storage for me and update the list
-    showSongs()
+	saveSongs(mySongs)
 	// this will show all the songs on the page for me
-    formElement.reset()
+	showSongs()
+	// this will show all the songs on the page for me
+	formElement.reset()
 	// this will clear the form inputs for a new session
+	// https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset
 })
 showSongs()
 
