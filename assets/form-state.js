@@ -3,6 +3,12 @@ let formElement = document.querySelector('#some-form')
 let stateCallback = undefined
 // I added this because of an error code in my devtools. I will come back to this later, but I needed to get this out the way to make sure my sessions are saved locally.
 
+
+
+
+
+
+
 // Function to match the form to URL/stored params.
 let updateForm = (params) => {
 	// Parse into params:
@@ -35,6 +41,12 @@ let updateForm = (params) => {
 	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
 }
 
+
+
+
+
+
+
 // Function to save them to `localStorage`.
 let storeParams = () => {
 	// Get the form data:
@@ -48,6 +60,11 @@ let storeParams = () => {
 		localStorage.setItem(key, value)
 	})
 }
+
+
+
+
+
 
 // Function to update the URL from the form.
 let updateUrlParams = () => {
@@ -73,6 +90,10 @@ let updateUrlParams = () => {
 
 
 
+
+
+
+
 // First, check for query/params in the URL:
 // https://developer.mozilla.org/en-US/docs/Web/API/Location/search
 if (location.search) {
@@ -86,6 +107,11 @@ else if (localStorage.length > 0) {
 
 	updateForm(storedParams) // Update the form from these.
 }
+
+
+
+
+
 
 
 // Watch for events!
