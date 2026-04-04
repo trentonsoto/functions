@@ -1,3 +1,7 @@
+// Disclosure: Look at the watch for events section at the bottom. AI was used through the built in chat, and it gave more than what I asked. However, I did use what it provided to learn and implement, and added my comments and understanding to it. I asked for clarity on the next step, but it provided a finished code. 
+
+
+
 // Target your form.
 let formElement = document.querySelector('#some-form')
 // let stateCallback = undefined
@@ -54,10 +58,13 @@ function showSongs () {
 	// this will prevent a duplicate, so it won't display twice (I believe so)
 	songs.forEach((song) => {
 		// this will look through my songs and display them one by one
-		songList.innerHTML += `<p>${song.title}</p> <p>${song.genre}</p> <p>${song.beat}</p> <p>${song.lyrics}</p>
+		songList.innerHTML += `
+		<div>
+		<p>${song.title}</p> <p>${song.genre}</p> <p>${song.beat}</p> <p>${song.lyrics}</p>
+		</div>
 		`
 	})
-	// WILL COME BACK TO THIS WHEN THE TIME IS RIGHT
+	// WILL COME BACK TO THIS WHEN THE TIME IS RIGHT. STILL NOT SURE ABOUT THIS ONE. MIGHT NEED TO REWRITE IT TO BE MORE SPECIFIC ABOUT WHAT IT IS SHOWING.
 }
 
 
@@ -70,6 +77,35 @@ formElement.addEventListener('submit', (event) => {
 	// Don’t actually submit (which would refresh the page):
 	// https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
 	event.preventDefault()
+
+
+	// For this part, I used the built in chat to help me understand how to get my three functions to behave together. I understand that I need to get the data, save it, and then display it. It helped me understand the concept and I went in to understand each line and why it is there. I added comments to show the understanding. I didn't ask the built in chat to write the code for me, I just asked for the next step, but it had reconfigured my code, so I "undid" it but used it to study and learn from it. 
+	const formData= new FormData(formElement)
+	// this takes the form data and saves it to formData
+	const song = {
+		// this is a new object that I will call song because I am saving songs to local storage
+		title:formData.get('some-text') || '',
+		// this targets what I put into the title text field
+        genre:formData.get('some-option') || '',
+		// this targets what I put into the genre input field
+        beat:formData.get('beat-link') || '',
+		// this targets what I put into the beat text field
+        lyrics:formData.get('lyric-notes') || ''
+		// this targets what I put into the lyric text field
+	}
+	const songs = getSongs()
+	// this will get the songs that are already in local storage so I can add to them instead of replacing them. I tested it out and it adds to it instead of replacing it!
+    songs.push(song)
+	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
+	// the push adds new entries to the end of the array, so it will add my new song entries at the end of the list and not replace them 
+    saveSongs(songs)
+	// this will save the songs to the local storage for me and update the list
+    showSongs()
+	// this will show all the songs on the page for me
+    formElement.reset()
+	// this will clear the form inputs for a new session
 })
+// showSongs()
+
 
 
