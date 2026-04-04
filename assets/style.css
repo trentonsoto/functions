@@ -15,3 +15,9 @@ form {
 	gap: var(--spacing);
 	padding: var(--spacing);
 }
+
+
+.song-entry {
+	border-bottom: 1px solid #000;
+	padding: 2em;
+}
