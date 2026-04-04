@@ -60,7 +60,7 @@ function showSongs () {
 		// this will look through my songs and display them one by one
 		songList.innerHTML += `
 		<div>
-		<p>${song.title}</p> <p>${song.genre}</p> <p>${song.beat}</p> <p>${song.lyrics}</p>
+		<h3>${song.title}</h3> <p>${song.genre}</p> <p>${song.beat}</p> <p>${song.lyrics}</p>
 		</div>
 		`
 	})
@@ -106,7 +106,7 @@ formElement.addEventListener('submit', (event) => {
     formElement.reset()
 	// this will clear the form inputs for a new session
 })
-// showSongs()
+showSongs()
 
 
 
