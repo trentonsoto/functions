@@ -30,6 +30,17 @@ function getSongs () {
 
 
 
+// SAVE TO LOCAL STORAGE 
+// this will take my inputs that I want to save from my forms, and put it into text that can be saved in my local storage under my defined word "songs"
+function saveSongs(songs) {
+	localStorage.setItem('songs', JSON.stringify(songs))
+	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+	// https://www.youtube.com/watch?v=E2rvDpubmnA
+	// Stringify converts an object or an array to a JSON string
+	// this new function has an input "songs". I added an input because it needs to know what songs I want to save.
+	// this built in chat confirmed I don't need an input for getSongs because it can read and grab it from the local storage, but saveSongs needs it to know what to save to local storage.
+}
+
 
 
 
