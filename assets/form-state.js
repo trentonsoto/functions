@@ -1,4 +1,4 @@
-// Disclosure: Look at the watch for events section at the bottom. AI was used through the built in chat, and it gave more than what I asked. However, I did use what it provided to learn and implement, and added my comments and understanding to it. I asked for clarity on the next step, but it provided a finished code. 
+// Disclosure: Look at the watch for events section at the bottom. 
 
 
 
@@ -79,8 +79,7 @@ formElement.addEventListener('submit', (event) => {
 	event.preventDefault()
 
 
-	// For this part, I used the built in chat to help me understand how to get my three functions to behave together. I understand that I need to get the data, save it, and then display it. It helped me understand the concept and I went in to understand each line and why it is there. I added comments to show the understanding. 
-	// I didn't ask the built in chat to write the code for me, I just asked for the next step, but it had reconfigured my code, so I "undid" it but used it to study and learn from it. 
+	// For this part, I used the built in chat to help me understand how to get my three functions to behave together. I understand that I need to get the data, save it, and then display it. It helped me understand the concept and how to connect my functions together. I used it as a learning aid to understand the structure. I added comments to show my understanding. 
 	const formData= new FormData(formElement)
 	// this takes the inputs and saves it to formData
 	const song = {
