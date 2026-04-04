@@ -42,16 +42,22 @@ function saveSongs(songs) {
 }
 
 
-function getSongs () {
+// SHOW SONGS ON THE PAGE
+function showSongs () {
 	// this function will go and get the songs
-	let stored = getSongs()
+	let songs = getSongs()
 	let songList=document.querySelector('#saved-songs')
 	// this will show where to put the songs on the page
+	if (!songList) return;
+	// this will prevent an error if no elements on are on the page
 	songList.innerHTML = ''
 	// this will prevent a duplicate, so it won't display twice (I believe so)
 	songs.forEach((song) => {
-		
+		// this will look through my songs and display them one by one
+		songList.innerHTML += `<p>${song.title}</p> <p>${song.genre}</p> <p>${song.beat}</p> <p>${song.lyrics}</p>
+		`
 	})
+	// WILL COME BACK TO THIS WHEN THE TIME IS RIGHT
 }
 
 
