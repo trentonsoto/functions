@@ -79,6 +79,7 @@ formElement.addEventListener('submit', (event) => {
 	event.preventDefault()
 
 
+	// *********************************************************************
 	// For this part, I used the built in chat to help me understand how to get my three functions to behave together. I understand that I need to get the data, save it, and then display it. It helped me understand the concept and how to connect my functions together. I used it as a learning aid to understand the structure. I added comments to show my understanding. 
 	const formData= new FormData(formElement)
 	// this takes the inputs and saves it to formData
