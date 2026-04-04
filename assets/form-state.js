@@ -79,7 +79,8 @@ formElement.addEventListener('submit', (event) => {
 	event.preventDefault()
 
 
-	// For this part, I used the built in chat to help me understand how to get my three functions to behave together. I understand that I need to get the data, save it, and then display it. It helped me understand the concept and I went in to understand each line and why it is there. I added comments to show the understanding. I didn't ask the built in chat to write the code for me, I just asked for the next step, but it had reconfigured my code, so I "undid" it but used it to study and learn from it. 
+	// For this part, I used the built in chat to help me understand how to get my three functions to behave together. I understand that I need to get the data, save it, and then display it. It helped me understand the concept and I went in to understand each line and why it is there. I added comments to show the understanding. 
+	// I didn't ask the built in chat to write the code for me, I just asked for the next step, but it had reconfigured my code, so I "undid" it but used it to study and learn from it. 
 	const formData= new FormData(formElement)
 	// this takes the form data and saves it to formData
 	const song = {
