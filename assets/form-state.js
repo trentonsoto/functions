@@ -59,7 +59,7 @@ function showSongs () {
 	songs.forEach((song) => {
 		// this will look through my songs and display them one by one
 		songList.innerHTML += `
-		<div>
+		<div class="song-entry">
 		<h3>${song.title}</h3> <p>${song.genre}</p> <p>${song.beat}</p> <p>${song.lyrics}</p>
 		</div>
 		`
