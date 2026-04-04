@@ -5,6 +5,11 @@ let formElement = document.querySelector('#some-form')
 
 
 
+
+
+
+// CHECK LOCAL STORAGE
+// This will check local storage for songs that are saved already for me, and present them so I can add to the list instead of replacing it
 function getSongs () {
 	let stored = localStorage.getItem('songs')
 	// IN LOCAL STORAGE, FIND 'songs" AND SAVE IT TO SOMETHING CALLED "stored"
