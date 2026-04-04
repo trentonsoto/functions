@@ -42,6 +42,17 @@ function saveSongs(songs) {
 }
 
 
+function getSongs () {
+	// this function will go and get the songs
+	let stored = getSongs()
+	let songList=document.querySelector('#saved-songs')
+	// this will show where to put the songs on the page
+	songList.innerHTML = ''
+	// this will prevent a duplicate, so it won't display twice (I believe so)
+	songs.forEach((song) => {
+		
+	})
+}
 
 
 
