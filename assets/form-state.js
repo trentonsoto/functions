@@ -9,6 +9,8 @@ let formElement = document.querySelector('#some-form')
 // saveSongs saves to local storage
 // showSongs shows the songs on the page
 // deleteSongs will delete (when I create this function)
+// editSongs will edit (when I create this function)
+// other things to do (1: get rid of the navigation at the top) (2: use the now added space to explain what my product is) (3: i don't need all the input fields to show up right away, maybe they show up one by one as the user types into the field) (4: make the user not be able to press "submit" until they have filled out all the fields) (5: maybe keep the input form sticky in the viewport so it is always there and the list of songs scroll behind it) 
 
 
 
@@ -81,7 +83,7 @@ function deleteSong(songID) {
 	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 	// this will go through my entries and filter out the one that has the same id. I was going to use splice that I found on MDN, but filter seemed less complex
 	// this will create a new list of songs that doesn't include the one I want to get rid of, so it will filter through them and keep the ones that don't have the same id (!==songID) 
-	
+
 	saveSongs (newList)
 	// ADD COMMENT
 
