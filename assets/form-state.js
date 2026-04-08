@@ -168,6 +168,7 @@ formElement.addEventListener('submit', (event) => {
 	// this will clear the form inputs for a new session
 	// https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset
 })
+
 showSongs()
 // this runs when the page first loads to show saved songs
 
