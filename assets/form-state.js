@@ -80,6 +80,8 @@ function deleteSong(songID) {
 	let newList=mySongs.filter((entries) => entries.id !==songID)
 	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 	// this will go through my entries and filter out the one that has the same id. I was going to use splice that I found on MDN, but filter seemed less complex
+	// this will create a new list of songs that doesn't include the one I want to get rid of, so it will filter through them and keep the ones that don't have the same id (!==songID) 
+	
 	saveSongs (newList)
 	// ADD COMMENT
 
