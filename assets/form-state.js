@@ -73,6 +73,21 @@ function showSongs () {
 
 
 
+function deleteSong(songID) {
+	// this function will delete songs based on the unique id I created 
+	// this function needs an input to know which song to delete, similar to my function saveSongs
+	let mySongs=getSongs ()
+	let newList=mySongs.filter((entries) => entries.id !==songID)
+	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+	// this will go through my entries and filter out the one that has the same id. I was going to use splice that I found on MDN, but filter seemed less complex
+	saveSongs (newList)
+	// ADD COMMENT
+
+	showSongs()
+}
+
+
+
 
 
 // Watch for events!
