@@ -4,6 +4,12 @@ let formElement = document.querySelector('#some-form')
 // I added this because of an error code in my devtools. I will come back to this later, but I needed to get this out the way to make sure my sessions are saved locally.
 
 
+// comments for me to remember 
+// getSongs fetches from local storage
+// saveSongs saves to local storage
+// showSongs shows the songs on the page
+// deleteSongs will delete (when I create this function)
+
 
 
 
