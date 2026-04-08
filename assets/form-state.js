@@ -11,6 +11,7 @@ let formElement = document.querySelector('#some-form')
 // deleteSongs will delete (when I create this function)
 // editSongs will edit (when I create this function)
 // other things to do (1: get rid of the navigation at the top) (2: use the now added space to explain what my product is) (3: i don't need all the input fields to show up right away, maybe they show up one by one as the user types into the field) (4: make the user not be able to press "submit" until they have filled out all the fields) (5: maybe keep the input form sticky in the viewport so it is always there and the list of songs scroll behind it) 
+// check M. D. E. comments!
 
 
 
