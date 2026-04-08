@@ -138,12 +138,12 @@ formElement.addEventListener('submit', (event) => {
 	// with new entries, this will update the list for me and place it back into local storage 
 	showSongs()
 	// this will show all the songs on the page for me
+	// shows whenever I submit a new song
 	formElement.reset()
 	// this will clear the form inputs for a new session
 	// https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset
 })
 showSongs()
-
-// question: do i need showSongs twice?
+// this runs when the page first loads to show saved songs
 
 
