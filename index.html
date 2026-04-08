@@ -29,44 +29,46 @@
 			<p>Get started</p>
 		<!-- New element, who dis: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form -->
 			<div id="saved-songs"></div>
-		<form id="some-form">
-			<section>
-				<!-- Visible/accessible `label` connected through the `id`: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label -->
-				<label for="some-text">Song title:</label>
-				<!-- Different types can control what is allowed: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
-				<input id="some-text" name="some-text" placeholder="Some suggested text" required type="text">
-			</section>
-			<section>
-				<label for="some-option">Genre:</label>
-				<!-- Classic “dropdown”: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select -->
-				<select id="some-option" name="some-option">
-						<option>Select below</option>
-						<option>R&B</option>
-						<option>Pop</option>
-						<option>Rock</option>
-						<option>Rap</option>
-						<option>Alternative</option>
-						<optgroup label="Grouped">
-						</optgroup>
-				</select>
-			</section>
-			<section>
-				<label for="beat-link">Beat link:</label>
-				<input id="beat-link" name="beat-link" placeholder="Paste a YouTube link" required type="url">
-			</section>
-			<section>
-				<label for="lyric-notes">Lyric notes:</label>
-				<!-- the text area supports multiple lines which is good for the songwriting process -->
-				 <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea -->
-				<textarea id="lyric-notes" name="lyric-notes" placeholder="Enter your lyrics here" required type="text"></textarea>
-			</section>
-            <section>
-				<!-- `button` for in-page actions: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button -->
-				<button type="reset">Reset</button>
-				<!-- `button` without a type will submit their parent `form`. -->
-				<button>Submit</button>
-				<!-- There is also a special `submit` type: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/submit -->
-			</section>
+
+			<form id="some-form">
+				<section id="form-title">
+					<!-- Visible/accessible `label` connected through the `id`: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label -->
+					<label for="some-text">Song title:</label>
+					<!-- Different types can control what is allowed: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
+					<input id="some-text" name="some-text" placeholder="Enter a song title" required type="text">
+				</section>
+				<section id="form-genre">
+					<label for="some-option">Genre:</label>
+					<!-- Classic “dropdown”: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select -->
+					<select id="some-option" name="some-option">
+							<option>Select below</option>
+							<option>R&B</option>
+							<option>Pop</option>
+							<option>Rock</option>
+							<option>Rap</option>
+							<option>Alternative</option>
+							<optgroup label="Grouped">
+							</optgroup>
+					</select>
+				</section>
+				<section id="form-beat">
+					<label for="beat-link">Beat link:</label>
+					<input id="beat-link" name="beat-link" placeholder="Paste a YouTube link" required type="url">
+				</section>
+				<section id="form-lyrics">
+					<label for="lyric-notes">Lyric notes:</label>
+					<!-- the text area supports multiple lines which is good for the songwriting process -->
+					<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea -->
+					<textarea id="lyric-notes" name="lyric-notes" placeholder="Enter your lyrics" required type="text"></textarea>
+				</section>
+				<section id="form-buttons">
+					<!-- `button` for in-page actions: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button -->
+					<button type="reset">Reset</button>
+					<!-- `button` without a type will submit their parent `form`. -->
+					<button>Submit</button>
+					<!-- There is also a special `submit` type: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/submit -->
+				</section>
+			</form>
 		</main>
 
 
