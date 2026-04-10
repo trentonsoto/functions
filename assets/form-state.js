@@ -83,7 +83,7 @@ function entrance () {
 	let songs = getSongs()
 	let enterState=document.querySelector('#enter-state')
 	if (songs.length === 0) {
-		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length
+		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length
 		// using a length property to have this information display only when there aren't any songs in the local storage, so like an entrance state for a user
 		enterState.style.display='block'
 	}
