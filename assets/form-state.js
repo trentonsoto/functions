@@ -108,14 +108,6 @@ formElement.addEventListener('submit', (event) => {
 	event.preventDefault()
 
 
-	// *********************************************************************
-	// For this part, I used the built in chat to help me understand how to get my three functions to behave together. I understand that I need to get the data, save it, and then display it. It helped me understand the concept and how to connect my functions together. I used it as a learning aid to understand the structure. I added comments to show my understanding. 
-	// const formData= new FormData(formElement)
-	// this takes the inputs and saves it to formData
-	// removed this because I swtiched to document.querySelector for my input
-
-
-
 	let song = {
 		// this is a new object that I will call song because I am saving songs to local storage
 		id: Date.now(),
@@ -132,32 +124,6 @@ formElement.addEventListener('submit', (event) => {
         lyrics:document.querySelector('#lyric-notes').value,
 		// this targets what I put into the lyric text field
 	}
-
-
-
-
-
-	//******************************************************* 
-	// this is the part where I connect my functions together (old method from chats help). I rewrote it in the way that I learned and understand and commented it out, and the new version is at the bottom. 
-
-
-	// const songs = getSongs()
-	// // this will get the songs that are already in local storage so I can add to them instead of replacing them. I tested it out and it adds to it instead of replacing it!
-    // songs.push(song)
-	// // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
-	// // the push adds new entries to the end of the array, so it will add my new song entries at the end of the list and not replace them 
-    // saveSongs(songs)
-	// // this will save the songs to the local storage for me and update the list
-    // showSongs()
-	// // this will show all the songs on the page for me
-    // formElement.reset()
-	// // this will clear the form inputs for a new session
-
-
-	// ********************************************************
-
-
-
 
 	let mySongs = getSongs()
 	// this will get the songs that are already in local storage so I can add to them instead of replacing them. I tested it out and it adds to it instead of replacing it! 
