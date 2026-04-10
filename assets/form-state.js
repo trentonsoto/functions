@@ -71,7 +71,7 @@ function showSongs () {
 		songList.innerHTML += `
 		<div class="song-entry">
 		<h3>${song.title}</h3> <p>${song.genre}</p> <p>${song.beat}</p> <p>${song.lyrics}</p>
-		<button onClick="deleteSong(${song.id})">Delete</button>
+		<button onClick="openModa(${song.id})">Delete</button>
 		</div>
 		`
 		// for each song and its entry and information, this button is added so when its clicked, the function deleteSong will know which song to delete based on the id created and used here "song.id"
@@ -113,6 +113,15 @@ function deleteSong(songID) {
 }
 
 
+
+// MODAL FOR DELETE CONFIRMATION 
+let modalDelete=document.querySelector('#delete-modal')
+let confirmButton=document.querySelector('#confirm-delete')
+let closeButton=document.querySelector('#close-delete-modal')
+
+function openModal (songID) {
+	modalDelete.showModal() 
+}
 
 
 
