@@ -23,6 +23,8 @@ let formElement = document.querySelector('#some-form')
 // (5: maybe keep the input form sticky in the viewport so it is always there and the list of songs scroll behind it) 
 // check M. D. E. comments!
 
+let songList=document.querySelector('#saved-songs')
+let enterState=document.querySelector('#enter-state')
 
 
 // let entranceView="createSong"
@@ -88,7 +90,7 @@ function saveSongs(songs) {
 function showSongs () {
 	// this function will go and get the songs
 	let songs = getSongs()
-	let songList=document.querySelector('#saved-songs')
+	// let songList=document.querySelector('#saved-songs')
 	// this will show where to put the songs on the page
 	if (!songList) return;
 	// this will prevent an error if no elements on are on the page
@@ -104,12 +106,13 @@ function showSongs () {
 		`
 		// for each song and its entry and information, this button is added so when its clicked, the function deleteSong will know which song to delete based on the id created and used here "song.id"
 	})
+	songList.style.display = 'none'
 	// WILL COME BACK TO THIS WHEN THE TIME IS RIGHT. STILL NOT SURE ABOUT THIS ONE. MIGHT NEED TO REWRITE IT TO BE MORE SPECIFIC ABOUT WHAT IT IS SHOWING.
 }
 
 function entrance () {
 	let songs = getSongs()
-	let enterState=document.querySelector('#enter-state')
+	// let enterState=document.querySelector('#enter-state')
 	if (songs.length === 0) {
 		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length
 		// using a length property to have this information display only when there aren't any songs in the local storage, so like an entrance state for a user
