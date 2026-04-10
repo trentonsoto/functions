@@ -71,7 +71,7 @@ function showSongs () {
 		songList.innerHTML += `
 		<div class="song-entry">
 		<h3>${song.title}</h3> <p>${song.genre}</p> <p>${song.beat}</p> <p>${song.lyrics}</p>
-		<button onClick="openModa(${song.id})">Delete</button>
+		<button onClick="openModal(${song.id})">Delete</button>
 		</div>
 		`
 		// for each song and its entry and information, this button is added so when its clicked, the function deleteSong will know which song to delete based on the id created and used here "song.id"
@@ -116,12 +116,30 @@ function deleteSong(songID) {
 
 // MODAL FOR DELETE CONFIRMATION 
 let modalDelete=document.querySelector('#delete-modal')
+//this targets the delete modal I created in the HTML (inside the dialog tag)
 let confirmButton=document.querySelector('#confirm-delete')
+// this targets the YES delete button in the modal
 let closeButton=document.querySelector('#close-delete-modal')
+//this targets the NO keep button in the modal
 
-function openModal (songID) {
+function openModal(songID) {
+	songDeleted=songID
+	// this can save the ID of the song so it knows which song is being deleted and this is similar to the delete function
 	modalDelete.showModal() 
+	// this will open the modal
 }
+// this function will open the modal for me
+
+confirmButton.addEventListener('click', () => {
+deleteSong(songDeleted)
+modalDelete.close()
+})
+// this will run the delete function and then can close the modal once it is deleted 
+
+closeButton.addEventListener('click', () => {
+modalDelete.close()
+})
+// this will close the modal if NO keep is clicked from the modal
 
 
 
