@@ -85,10 +85,13 @@ function entrance () {
 	if (songs.length === 0) {
 		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length
 		// using a length property to have this information display only when there aren't any songs in the local storage, so like an entrance state for a user
-		enterState.style.display='none'
+		enterState.style.display='block'
 	}
 	else {
-		enterState.style.display='block'
+		enterState.style.display='none'
+		// https://www.youtube.com/watch?v=jXlWW6ppq1g
+		// this video helped explain the concept of block and none for display, when hiding and showing elements on the screen. 
+		// the way I wrote this is when there are no songs, the entrance state will show, but when a song is added, the state will disappear because the songs show now
 	}
 }
 
