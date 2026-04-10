@@ -1,3 +1,8 @@
+// https://vscode.dev/github/trentonsoto/functions/blob/mainwZWY2ZDNiMjhm
+// docs link: https://docs.google.com/document/d/1wftl5TVUsG03gS0FWFUqJVDPDQ1xkglMw95gM7fPLIk/edit?usp=sharing
+
+
+
 // Target your form.
 let formElement = document.querySelector('#some-form')
 // let stateCallback = undefined
