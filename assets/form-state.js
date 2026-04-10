@@ -20,6 +20,29 @@ let formElement = document.querySelector('#some-form')
 
 
 
+let entranceView="createSong"
+let createButton = document.querySelector('#create-song')
+let viewButton = document.querySelector('#view-songs')
+
+viewButton.addEventListener('click', () => {
+	// HIDE FORM
+	// HIDE ENTRANCE STATE 
+	// SHOW SONGS
+	// this is from your tips in how to handle a big task
+	formElement.style.display = 'none'
+	enterState.style.display = 'none'
+	songList.style.display = 'block'
+})
+createButton.addEventListener('click', () => {
+	// SHOW FORM
+	// SHOW ENTRANCE STATE 
+	// HIDE SONGS
+	// this is from your tips in how to handle a big task
+	formElement.style.display = 'block'
+	enterState.style.display = 'block'
+	songList.style.display = 'none'
+})
+
 
 
 // CHECK LOCAL STORAGE
