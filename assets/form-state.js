@@ -116,7 +116,7 @@ formElement.addEventListener('submit', (event) => {
 
 
 
-	const song = {
+	let song = {
 		// this is a new object that I will call song because I am saving songs to local storage
 		id: Date.now(),
 		// this will give my song entries a unique id based on when they were created, so to my understanding, two songs will not have the same id because they will be created at different times.
