@@ -208,8 +208,12 @@ formElement.addEventListener('submit', (event) => {
 	saveSongs(mySongs)
 	// with new entries, this will update the list for me and place it back into local storage 
 	showSongs()
+	formElement.style.display = 'none'
+	enterState.style.display = 'none'
+	songList.style.display = 'block'
 	// this will show all the songs on the page for me
 	// shows whenever I submit a new song
+	// I added these three lines of code from up above because when a user clicks submit, I want the view to switch to the "view songs" page to see the entry instead of clearing the form and leaving it like that
 	formElement.reset()
 	// this will clear the form inputs for a new session
 	// https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset
