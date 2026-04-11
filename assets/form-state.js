@@ -113,7 +113,7 @@ function showSongs () {
 		// for each song and its entry and information, this button is added so when its clicked, the function deleteSong will know which song to delete based on the id created and used here "song.id"
 	})
 	// songList.style.display = 'none'
-	songList.classList.add('hidden')
+	// songList.classList.add('hidden')
 	// WILL COME BACK TO THIS WHEN THE TIME IS RIGHT. STILL NOT SURE ABOUT THIS ONE. MIGHT NEED TO REWRITE IT TO BE MORE SPECIFIC ABOUT WHAT IT IS SHOWING.
 }
 
