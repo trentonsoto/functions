@@ -106,10 +106,16 @@ function showSongs () {
 		// this will look through my songs and display them one by one
 		songList.innerHTML += `
 		<div class="song-entry">
-		<h3>${song.title}</h3> <p>${song.genre}</p> <p>${song.beat}</p> <p>${song.lyrics}</p>
+		<h3>${song.title}</h3>
+		<p>${song.date}</p>
 		<button onClick="openModal(${song.id})">Delete</button>
 		</div>
 		`
+		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+		// these two links helped me define a timestamp for my song entries, so that I can show when they were added / created 
+		// I added the timestamp here, and was able to get it to work and show up on the page. I followed mdn's use of the toLocaleString method to get the date and time to show up for me. And defined it with just date, and then used that here, and moved the genre, beat, and lyrics outside of the template literals
+		// <p>${song.genre}</p> <p>${song.beat}</p> <p>${song.lyrics}</p>
 		// for each song and its entry and information, this button is added so when its clicked, the function deleteSong will know which song to delete based on the id created and used here "song.id"
 	})
 	// songList.style.display = 'none'
@@ -210,6 +216,10 @@ formElement.addEventListener('submit', (event) => {
 		// this targets what I put into the beat text field
         lyrics:document.querySelector('#lyric-notes').value,
 		// this targets what I put into the lyric text field
+		date: new Date ().toLocaleString(),
+		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+		// these two links helped me define a timestamp for my song entries, so that I can show when they were added / created
 	}
 
 	let mySongs = getSongs()
