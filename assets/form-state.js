@@ -36,18 +36,24 @@ viewButton.addEventListener('click', () => {
 	// HIDE ENTRANCE STATE 
 	// SHOW SONGS
 	// this is from your tips in how to handle a big task
-	formElement.style.display = 'none'
-	enterState.style.display = 'none'
-	songList.style.display = 'block'
+	// formElement.style.display = 'none'
+	// enterState.style.display = 'none'
+	// songList.style.display = 'block'
+	formElement.classList.add('hidden')
+	enterState.classList.add('hidden')
+	songList.classList.remove('hidden')
 })
 createButton.addEventListener('click', () => {
 	// SHOW FORM
 	// SHOW ENTRANCE STATE 
 	// HIDE SONGS
 	// this is from your tips in how to handle a big task
-	formElement.style.display = 'block'
-	enterState.style.display = 'block'
-	songList.style.display = 'none'
+	// formElement.style.display = 'block'
+	// enterState.style.display = 'block'
+	// songList.style.display = 'none'
+	formElement.classList.remove('hidden')
+	enterState.classList.remove('hidden')
+	songList.classList.add('hidden')
 })
 
 
@@ -106,25 +112,32 @@ function showSongs () {
 		`
 		// for each song and its entry and information, this button is added so when its clicked, the function deleteSong will know which song to delete based on the id created and used here "song.id"
 	})
-	songList.style.display = 'none'
+	// songList.style.display = 'none'
+	songList.classList.add('hidden')
 	// WILL COME BACK TO THIS WHEN THE TIME IS RIGHT. STILL NOT SURE ABOUT THIS ONE. MIGHT NEED TO REWRITE IT TO BE MORE SPECIFIC ABOUT WHAT IT IS SHOWING.
 }
 
-function entrance () {
-	let songs = getSongs()
-	// let enterState=document.querySelector('#enter-state')
-	if (songs.length === 0) {
-		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length
-		// using a length property to have this information display only when there aren't any songs in the local storage, so like an entrance state for a user
-		enterState.style.display='block'
-	}
-	else {
-		enterState.style.display='none'
-		// https://www.youtube.com/watch?v=jXlWW6ppq1g
-		// this video helped explain the concept of block and none for display, when hiding and showing elements on the screen. 
-		// the way I wrote this is when there are no songs, the entrance state will show, but when a song is added, the state will disappear because the songs show now
-	}
-}
+
+// I commented this out because I don't think I need it right now, but I will revisit it later if I need to come back to it. I currently have the enterState in the first few lines of this file, so I am using that to track the listening event
+// function entrance () {
+// 	let songs = getSongs()
+// 	// let enterState=document.querySelector('#enter-state')
+// 	if (songs.length === 0) {
+// 		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length
+// 		// using a length property to have this information display only when there aren't any songs in the local storage, so like an entrance state for a user
+// 		// enterState.style.display='block'
+// 		enterState.classList.remove('hidden')
+// 	}
+// 	else {
+// 		// enterState.style.display='none'
+// 		enterState.classList.add('hidden')
+// 		// https://www.youtube.com/watch?v=jXlWW6ppq1g
+// 		// this video helped explain the concept of block and none for display, when hiding and showing elements on the screen. 
+// 		// the way I wrote this is when there are no songs, the entrance state will show, but when a song is added, the state will disappear because the songs show now
+// 	}
+// }
+
+
 
 
 
@@ -208,9 +221,12 @@ formElement.addEventListener('submit', (event) => {
 	saveSongs(mySongs)
 	// with new entries, this will update the list for me and place it back into local storage 
 	showSongs()
-	formElement.style.display = 'none'
-	enterState.style.display = 'none'
-	songList.style.display = 'block'
+	// formElement.style.display = 'none'
+	// enterState.style.display = 'none'
+	// songList.style.display = 'block'
+	formElement.classList.add('hidden')
+	enterState.classList.add('hidden')
+	songList.classList.remove('hidden')
 	// this will show all the songs on the page for me
 	// shows whenever I submit a new song
 	// I added these three lines of code from up above because when a user clicks submit, I want the view to switch to the "view songs" page to see the entry instead of clearing the form and leaving it like that
