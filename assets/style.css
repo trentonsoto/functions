@@ -12,6 +12,7 @@
 	--yellow: #efb11d;
 	--beige: #ebe9e1;
 	--charcoal: #121212;
+	--nav-bg: #d3d3d3;
 }
 
 /* * {
@@ -40,6 +41,15 @@ main {
 		margin-block-end: calc(var(--spacing) * 2);
 		margin-block-start: var(--spacing);
 		/* color: var(--red-orange); */
+		/* background-color: var(--nav-bg);
+		border-radius: 10px;
+		padding: calc(var(--spacing) * 0.5); */
+
+		/* #toggle-buttons button {
+			background: transparent;
+			border: none;
+			padding: calc(var(--spacing) * 2);
+		} */
 
 		#create-song:hover {
 			color: var(--red-orange);
