@@ -25,6 +25,7 @@ let formElement = document.querySelector('#some-form')
 
 let songList=document.querySelector('#saved-songs')
 let enterState=document.querySelector('#enter-state')
+let editedSong=''
 
 
 // let entranceView="createSong"
