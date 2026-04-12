@@ -105,9 +105,12 @@ function showSongs () {
 	songs.forEach((song) => {
 		// this will look through my songs and display them one by one
 		songList.innerHTML += `
-		<div class="song-entry">
+		<div class="song-entry" onClick="expandedSong(this)">
 		<h3>${song.title}</h3>
 		<p>${song.date}</p>
+		<div class="song-information">
+			<p>${song.genre}</p> <p>${song.beat}</p> <p>${song.lyrics}</p>
+		</div>
 		<button onClick="openModal(${song.id})">Delete</button>
 		</div>
 		`
@@ -115,14 +118,17 @@ function showSongs () {
 		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 		// these two links helped me define a timestamp for my song entries, so that I can show when they were added / created 
 		// I added the timestamp here, and was able to get it to work and show up on the page. I followed mdn's use of the toLocaleString method to get the date and time to show up for me. And defined it with just date, and then used that here, and moved the genre, beat, and lyrics outside of the template literals
-		// <p>${song.genre}</p> <p>${song.beat}</p> <p>${song.lyrics}</p>
 		// for each song and its entry and information, this button is added so when its clicked, the function deleteSong will know which song to delete based on the id created and used here "song.id"
+		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
 	})
 	// songList.style.display = 'none'
 	// songList.classList.add('hidden')
 	// WILL COME BACK TO THIS WHEN THE TIME IS RIGHT. STILL NOT SURE ABOUT THIS ONE. MIGHT NEED TO REWRITE IT TO BE MORE SPECIFIC ABOUT WHAT IT IS SHOWING.
 }
 
+function expandedSong (card) {
+	card.classList.toggle('expanded')
+}
 
 // I commented this out because I don't think I need it right now, but I will revisit it later if I need to come back to it. I currently have the enterState in the first few lines of this file, so I am using that to track the listening event
 // function entrance () {
