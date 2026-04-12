@@ -71,6 +71,7 @@ form {
 	display: grid;
 	gap: var(--spacing);
 	padding: var(--spacing);
+	/* margin: calc(var(--spacing) / 2); */
 
 }
 form label {
@@ -90,7 +91,11 @@ form input, form textarea, form select {
 	font-family: var(--font-family);
 	font-size: var(--paragraph-size);
 	width: 100%;
+
 }
+/* input::placeholder {
+	color: var(--muted-pink);
+} */
 
 
 
