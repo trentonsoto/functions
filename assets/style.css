@@ -13,6 +13,7 @@
 	--beige: #ebe9e1;
 	--charcoal: #121212;
 	--nav-bg: #d3d3d3;
+	--light-orange: #ed7014;
 }
 
 body {
@@ -49,12 +50,12 @@ main {
 
 		#create-song:hover {
 			color: var(--red-orange);
-			font-weight: 500;
+			font-weight: 600;
 		}
 
 		#view-songs:hover {
 			color: var(--red-orange);
-			font-weight: 500;
+			font-weight: 600;
 		}
 
 
@@ -96,6 +97,41 @@ form input, form textarea, form select {
 /* input::placeholder {
 	color: var(--muted-pink);
 } */
+
+#form-buttons {
+	gap: calc(var(--spacing) * 1.5);
+	display: flex;
+}
+
+button.reset {
+	background-color: transparent;
+	color: var(--light-orange);
+	cursor: pointer;
+	border: 1px solid var(--light-orange);
+	padding-inline: calc(var(--spacing)*0.5);
+	padding-block: calc(var(--spacing)*0.5);
+	border-radius: var(--spacing);
+
+	&:hover {
+		color: var(--red-orange);
+		border: 1.5px solid var(--red-orange);
+		font-weight: 600;
+	}
+}
+
+button.submit {
+	background-color: var(--light-orange);
+	color: var(--beige);
+	cursor: pointer;
+	padding-inline: calc(var(--spacing)*0.5);
+	padding-block: calc(var(--spacing)*0.5);
+	border-radius: var(--spacing);
+
+	&:hover {
+		background-color: var(--red-orange);
+		font-weight: 600;
+	}
+}
 
 
 
