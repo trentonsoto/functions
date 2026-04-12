@@ -111,6 +111,7 @@ function showSongs () {
 		<div class="song-information">
 			<p>${song.genre}</p> <p>${song.beat}</p> <p>${song.lyrics}</p>
 		</div>
+		<button onClick="openModal(${song.id})">Edit</button>
 		<button onClick="openModal(${song.id})">Delete</button>
 		</div>
 		`
