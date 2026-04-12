@@ -11,6 +11,7 @@
 	--light-pink: #ffa2b6;
 	--yellow: #efb11d;
 	--beige: #ebe9e1;
+	--charcoal: #121212;
 }
 
 /* * {
@@ -19,6 +20,7 @@
 
 body {
 	background-color: var(--beige);	
+	/* background-color: var(--charcoal); */
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
@@ -37,6 +39,22 @@ main {
 		justify-content: center;
 		margin-block-end: calc(var(--spacing) * 2);
 		margin-block-start: var(--spacing);
+		/* color: var(--red-orange); */
+
+		#create-song:hover {
+			color: var(--red-orange);
+			font-weight: 500;
+		}
+
+		#view-songs:hover {
+			color: var(--red-orange);
+			font-weight: 500;
+		}
+
+
+		/* .active {
+			color: var(--red-orange);
+		} */
 	}
 }
 
@@ -55,6 +73,7 @@ form {
 .title {
 	margin: 0;
 	padding: 0;
+	line-height: 1;
 }
 
 #enter-state {
@@ -64,10 +83,12 @@ form {
 	min-height: 40vh;
 	text-align: center;
 	justify-content: center;
+	/* align-content: center; */
 
 	h1 {
 		font-size: var(--header-size);
 		color: var(--red-orange);
+		/* color: var(--beige); */
 		font-weight: 900;
 		text-transform: uppercase;
 		/* text-align: center; */
@@ -77,6 +98,7 @@ form {
 	p {
 		font-size: var(--paragraph-size);
 		color: var(--red-orange);
+		/* color: var(--beige); */
 		font-weight: 500;
 		margin-block-start: 0;
 	}
