@@ -35,6 +35,10 @@ form {
 	padding: var(--spacing);
 }
 
+/* .title-top, .title-bottom {
+	margin: -1rem;
+} */
+
 #enter-state {
 	display: grid;
 	gap: var(--spacing);
@@ -43,6 +47,9 @@ form {
 		font-size: calc(var(--header-size) * 1.5);
 		color: var(--red-orange);
 		font-weight: 900;
+		text-transform: uppercase;
+		text-align: center;
+		line-height: 1.5;
 	}
 
 	p {
