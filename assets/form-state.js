@@ -260,7 +260,7 @@ formElement.addEventListener('submit', (event) => {
 		newListSongs.push(song)
 		saveSongs(newListSongs)
 		showSongs()
-		// editedSong=''
+		editedSong=''
 	}
 
 	else{
