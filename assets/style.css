@@ -15,10 +15,6 @@
 	--nav-bg: #d3d3d3;
 }
 
-/* * {
-	box-sizing: border-box;
-} */
-
 body {
 	background-color: var(--beige);	
 	/* background-color: var(--charcoal); */
@@ -68,6 +64,7 @@ main {
 	}
 }
 
+/* FORM */
 form {
 	background-color: var(--nav-bg);
 	border-radius: calc(var(--spacing) / 2);
@@ -82,6 +79,8 @@ form label {
 	/* gap: calc(var(--spacing) * 20); */
 	font-size: var(--paragraph-size);
 	padding-block-end: var(--spacing);
+	font-weight: 500;
+	color: var(--red-orange);
 
 }
 form input, form textarea, form select {
@@ -94,11 +93,14 @@ form input, form textarea, form select {
 }
 
 
+
 .title {
 	margin: 0;
 	padding: 0;
 	line-height: 1;
 }
+
+
 
 #enter-state {
 	display: grid;
@@ -142,14 +144,14 @@ form input, form textarea, form select {
 }
 
 .song-entry {
-	border: 1px solid #000;
+	border: 1px solid var(--charcoal);
 	padding: 1em;
 	cursor: pointer;
 	margin-block-end: 1rem;
 	/* margin-inline-end: 50%; */
 	max-width: 100%;
 	/* box-shadow: 1rem 1rem 1rem #000; */
-	/* border: 1px solid #000; */
+	/* border: 1px solid var(--charcoal); */
 	
 }
 
