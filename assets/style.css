@@ -67,7 +67,8 @@ main {
 
 /* FORM */
 form {
-	background-color: var(--nav-bg);
+	/* background-color: var(--nav-bg); */
+	background-color: #f1f3ea;
 	border-radius: calc(var(--spacing) / 2);
 	display: grid;
 	gap: var(--spacing);
