@@ -111,7 +111,7 @@ function showSongs () {
 		<div class="song-information">
 			<p>${song.genre}</p> <p>${song.beat}</p> <p>${song.lyrics}</p>
 		</div>
-		<button onClick="openModal(${song.id})">Edit</button>
+		<button onClick="editSong(${song.id})">Edit</button>
 		<button onClick="openModal(${song.id})">Delete</button>
 		</div>
 		`
@@ -249,13 +249,29 @@ formElement.addEventListener('submit', (event) => {
 
 	let mySongs = getSongs()
 	// this will get the songs that are already in local storage so I can add to them instead of replacing them. I tested it out and it adds to it instead of replacing it! 
-	mySongs.push(song)
-	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
-	// the push adds new entries to the end of the array, so it will add my new song entries at the end of the list and not replace them 
-	// mySongs is my array / list of songs, and song is the new one created with the form inputs (HTML)
-	saveSongs(mySongs)
-	// with new entries, this will update the list for me and place it back into local storage 
-	showSongs()
+
+
+
+	if (editedSong) {
+		let newListSongs=mySongs.filter((entries) => entries.id !== editedSong)
+		newListSongs.push(song)
+		saveSongs(newListSongs)
+		showSongs()
+		editedSong=''
+	}
+
+	else{
+		mySongs.push(song)
+		saveSongs(mySongs)
+		showSongs()
+	}
+	// mySongs.push(song)
+	// // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
+	// // the push adds new entries to the end of the array, so it will add my new song entries at the end of the list and not replace them 
+	// // mySongs is my array / list of songs, and song is the new one created with the form inputs (HTML)
+	// saveSongs(mySongs)
+	// // with new entries, this will update the list for me and place it back into local storage 
+	// showSongs()
 	// formElement.style.display = 'none'
 	// enterState.style.display = 'none'
 	// songList.style.display = 'block'
