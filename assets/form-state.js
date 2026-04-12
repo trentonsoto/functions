@@ -133,7 +133,9 @@ function expandedSong (card) {
 
 
 function editSong (songID) {
+	// this function is going to edit songs that have been submitted
 	let mySongs=getSongs ()
+	// I need to fetch the list, which is what I've been doing already 
 	let song=mySongs.find((entries) => entries.id ===songID)
 	// this will find the song that HAS the same id as the one I click to edit for the song entry 
 	document.querySelector('#some-text').value=song.title
@@ -254,10 +256,11 @@ formElement.addEventListener('submit', (event) => {
 
 	if (editedSong) {
 		let newListSongs=mySongs.filter((entries) => entries.id !== editedSong)
+		// this will go through my list of songs and filter through to find the one that has the same id as the one I clicked edit for. it will keep the ones that don't have the same id
 		newListSongs.push(song)
 		saveSongs(newListSongs)
 		showSongs()
-		editedSong=''
+		// editedSong=''
 	}
 
 	else{
@@ -265,6 +268,7 @@ formElement.addEventListener('submit', (event) => {
 		saveSongs(mySongs)
 		showSongs()
 	}
+	// if I am editing the song, this needs to remove the old version, add the updated / new version, save it and show it. if nothing new is added, it can be added normally 
 	// mySongs.push(song)
 	// // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 	// // the push adds new entries to the end of the array, so it will add my new song entries at the end of the list and not replace them 
