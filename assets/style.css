@@ -1,11 +1,30 @@
 /* Some basics to make it easier to read. */
-main {
+:root {
 	--spacing: 2em;
+	--font-family: "area-variable", sans-serif;
+	--font-settings: "slnt" 0, "wdth" 100, "wght" 100, "INKT" 0;
+	--header-size: 3rem;
+	--paragraph-size: 1rem;
 
+	--red-orange: #e43d12;
+	--muted-pink: #d6536d;
+	--light-pink: #ffa2b6;
+	--yellow: #efb11d;
+	--beige: #ebe9e1;
+}
+
+
+body {
+	background-color: var(--beige);
+	
+}
+
+main {
 	display: grid;
 	gap: var(--spacing);
 	margin: initial;
 	padding: var(--spacing);
+	font-family: var(--font-family);
 }
 
 form {
@@ -14,6 +33,22 @@ form {
 	display: grid;
 	gap: var(--spacing);
 	padding: var(--spacing);
+}
+
+#enter-state {
+	display: grid;
+	gap: var(--spacing);
+
+	h1 {
+		font-size: calc(var(--header-size) * 1.5);
+		color: var(--red-orange);
+		font-weight: 900;
+	}
+
+	p {
+		font-size: var(--paragraph-size);
+		color: var(--red-orange);
+	}
 }
 
 
