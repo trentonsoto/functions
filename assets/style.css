@@ -201,4 +201,26 @@ button.submit {
 footer {
 	padding: var(--spacing);
 	gap: var(--spacing);
+	font-family: var(--font-family);
+	font-size: calc(var(--paragraph-size)/1.1);
 }
+
+
+/* TABLET BREAKPOINT */
+@media (min-width: 768px) {
+	form {
+		padding: calc(var(--spacing)*1.5);
+		margin: calc(var(--spacing)*1.5);
+	}
+
+	#enter-state {
+		h1{
+			font-size: calc(var(--header-size)*1.5);
+		}
+		p {
+			font-size: calc(var(--paragraph-size)*1.25);
+			padding: calc(var(--spacing)*2.5);
+		}
+	}
+}
+
