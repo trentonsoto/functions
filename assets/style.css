@@ -1,10 +1,10 @@
 /* Some basics to make it easier to read. */
 :root {
-	--spacing: 2em;
+	--spacing: 1em;
 	--font-family: "area-variable", sans-serif;
 	--font-settings: "slnt" 0, "wdth" 100, "wght" 100, "INKT" 0;
-	--header-size: 3rem;
-	--paragraph-size: 1rem;
+	--header-size: 1.5rem;
+	--paragraph-size: 0.85rem;
 
 	--red-orange: #e43d12;
 	--muted-pink: #d6536d;
@@ -13,16 +13,21 @@
 	--beige: #ebe9e1;
 }
 
+/* * {
+	box-sizing: border-box;
+} */
 
 body {
-	background-color: var(--beige);
-	
+	background-color: var(--beige);	
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
 }
 
 main {
 	display: grid;
 	gap: var(--spacing);
-	margin: initial;
+	/* margin: initial; */
 	padding: var(--spacing);
 	font-family: var(--font-family);
 }
@@ -44,11 +49,11 @@ form {
 	gap: var(--spacing);
 
 	h1 {
-		font-size: calc(var(--header-size) * 1.5);
+		font-size: var(--header-size);
 		color: var(--red-orange);
 		font-weight: 900;
 		text-transform: uppercase;
-		text-align: center;
+		/* text-align: center; */
 		line-height: 1.5;
 	}
 
@@ -73,21 +78,18 @@ form {
 
 .song-entry {
 	border: 1px solid #000;
-	padding: 5em;
+	padding: 1em;
 	cursor: pointer;
-	margin-block-end: 5rem;
+	margin-block-end: 1rem;
 	/* margin-inline-end: 50%; */
-	max-width: 40%;
+	max-width: 100%;
 	/* box-shadow: 1rem 1rem 1rem #000; */
 	/* border: 1px solid #000; */
 	
 }
 
-/* .saved-songs {
-	border: 1px solid #000;
-} */
 
 footer {
-	padding: 2rem;
+	padding: var(--spacing);
 	gap: var(--spacing);
 }
