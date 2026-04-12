@@ -131,6 +131,24 @@ function expandedSong (card) {
 	card.classList.toggle('expanded')
 }
 
+
+function editSong (songID) {
+	let mySongs=getSongs ()
+	let song=mySongs.find((entries) => entries.id ===songID)
+	// this will find the song that HAS the same id as the one I click to edit for the song entry 
+	document.querySelector('#some-text').value=song.title
+	document.querySelector('#some-option').value=song.genre
+	document.querySelector('#beat-link').value=song.beat
+	document.querySelector('#lyric-notes').value=song.lyrics
+	// this will put the information back into the input fields. instead of reading from the input fields, it will put the information back (writing into the field)
+
+	formElement.classList.remove('hidden')
+	enterState.classList.remove('hidden')
+	songList.classList.add('hidden')
+	editedSong=songID
+	// I need this so when the event listener is clicked, it will know which song to edit 
+}
+
 // I commented this out because I don't think I need it right now, but I will revisit it later if I need to come back to it. I currently have the enterState in the first few lines of this file, so I am using that to track the listening event
 // function entrance () {
 // 	let songs = getSongs()
