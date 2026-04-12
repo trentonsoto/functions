@@ -21,6 +21,13 @@ form {
 	display: none;
 }
 
+.song-information {
+	display: none;
+}
+
+.expanded .song-information {
+	display: block;
+}
 
 .song-entry {
 	border: 1px solid #000;
