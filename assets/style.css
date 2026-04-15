@@ -224,3 +224,12 @@ footer {
 	}
 }
 
+
+
+@media (min-width: 1024px) {
+	form {
+		padding: calc(var(--spacing)*3);
+		margin: calc(var(--spacing)*3);
+	}
+}
+
