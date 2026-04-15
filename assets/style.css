@@ -203,6 +203,9 @@ footer {
 	gap: var(--spacing);
 	font-family: var(--font-family);
 	font-size: calc(var(--paragraph-size)/1.1);
+	color: var(--red-orange);
+	font-weight: 500;
+	/* word-spacing: calc(var(--spacing)/2.5); */
 }
 
 
