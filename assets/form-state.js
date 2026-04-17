@@ -107,7 +107,7 @@ function showSongs () {
 		// this will look through my songs and display them one by one
 		songList.innerHTML += `
 		<div class="song-entry" onClick="expandedSong(this)">
-		<div class="song-title">
+		<div class="song-header">
 		<h3>${song.title}</h3>
 		<i class="arrow">▾</i>
 		</div>
@@ -119,6 +119,7 @@ function showSongs () {
 		<button class="delete-button" onClick="openModal(${song.id})">Delete Song</button>
 		</div>
 		`
+		// the arrow is from Lucy
 		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 		// these two links helped me define a timestamp for my song entries, so that I can show when they were added / created 
