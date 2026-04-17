@@ -243,6 +243,15 @@ button {
 		font-size: calc(var(--paragraph-size)/1.1);
 		opacity: 0.8;
 	}
+
+	.edit-button, .delete-button {
+		display: none;
+	}
+
+}
+.expanded .edit-button, .expanded .delete-button {
+	display: inline-block;
+	margin-top: var(--spacing);
 }
 
 
