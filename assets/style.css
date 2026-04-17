@@ -37,7 +37,7 @@ main {
 		display: flex;
 		gap: var(--spacing);
 		justify-content: center;
-		margin-block-end: calc(var(--spacing) * 2);
+		/* margin-block-end: calc(var(--spacing) * 2); */
 		margin-block-start: var(--spacing);
 		/* margin-inline: calc(var(--spacing)*-1); */
 		padding-block: calc(var(--spacing)*1.1);
@@ -183,12 +183,11 @@ button {
 
 #enter-state {
 	display: grid;
-	/* gap: var(--spacing); */
-	gap: 0.1rem;
-	min-height: 40vh;
+	gap: var(--spacing);;
+	min-height: 20vh;
 	text-align: center;
 	justify-content: center;
-	/* align-content: center; */
+	align-content: start;
 
 	h1 {
 		font-size: var(--header-size);
@@ -198,6 +197,7 @@ button {
 		text-transform: uppercase;
 		/* text-align: center; */
 		line-height: 1.5;
+		margin: 0;
 	}
 
 	p {
@@ -205,7 +205,8 @@ button {
 		color: var(--red-orange);
 		/* color: var(--beige); */
 		font-weight: 500;
-		margin-block-start: 0;
+		/* margin-block-start: 0; */
+		margin: 0;
 	}
 }
 
