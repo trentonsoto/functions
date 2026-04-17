@@ -107,16 +107,16 @@ function showSongs () {
 		// this will look through my songs and display them one by one
 		songList.innerHTML += `
 		<div class="song-entry" onClick="expandedSong(this)">
-		<div class="song-header">
-		<h3>${song.title}</h3>
-		<i class="arrow">▾</i>
-		</div>
-		<p>${song.date}</p>
-		<div class="song-information">
-			<p>${song.genre}</p> <p>${song.beat}</p> <p>${song.lyrics}</p>
-		</div>
-		<button class="edit-button" onClick="editSong(${song.id})">Edit Song</button>
-		<button class="delete-button" onClick="openModal(${song.id})">Delete Song</button>
+			<div class="song-header">
+			<h3>${song.title}</h3>
+			<i class="arrow">▾</i>
+			</div>
+			<p>${song.date}</p>
+			<div class="song-information">
+				<p>${song.genre}</p> <p>${song.beat}</p> <p>${song.lyrics}</p>
+			</div>
+			<button class="edit-button" onClick="editSong(${song.id})">Edit Song</button>
+			<button class="delete-button" onClick="openModal(${song.id})">Delete Song</button>
 		</div>
 		`
 		// the arrow is from Lucy

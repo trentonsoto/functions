@@ -132,6 +132,14 @@ button {
 	}
 }
 
+.song-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+
 
 #create-song, #view-songs {
 	background-color: transparent;
