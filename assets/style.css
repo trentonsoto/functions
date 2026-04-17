@@ -31,7 +31,7 @@ main {
 	/* margin: initial; */
 	padding: var(--spacing);
 	font-family: var(--font-family);
-	overflow: visible;
+	/* overflow: visible; */
 
 	#toggle-buttons {
 		display: flex;
