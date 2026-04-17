@@ -228,6 +228,7 @@ button {
 	cursor: pointer;
 	margin-block-end: 1rem;
 	max-width: 100%;
+	color: var(--charcoal);
 
 	&:hover {
 		border-color: var(--red-orange);
