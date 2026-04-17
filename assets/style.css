@@ -103,8 +103,13 @@ form input, form textarea, form select {
 	font-family: var(--font-family);
 	font-size: calc(var(--paragraph-size)/1.1);
 	width: 100%;
-
 }
+
+form textarea {
+	resize: vertical;	
+	min-height: calc(var(--spacing)*10);
+}
+
 /* input::placeholder {
 	color: var(--muted-pink);
 } */
