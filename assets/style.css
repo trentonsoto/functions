@@ -102,6 +102,7 @@ form input, form textarea, form select {
 	border-radius: calc(var(--spacing) / 2);
 	font-family: var(--font-family);
 	font-size: calc(var(--paragraph-size)/1.1);
+	/* this might be a "just looks right" number, but I tried scale factors of 0.95, and dividing by 1.1 felt the most appropriate */
 	width: 100%;
 }
 
