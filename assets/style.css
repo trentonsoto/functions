@@ -38,6 +38,7 @@ main {
 		justify-content: center;
 		margin-block-end: calc(var(--spacing) * 2);
 		margin-block-start: var(--spacing);
+		/* margin-inline: calc(var(--spacing)*-1); */
 		padding-block: calc(var(--spacing)*1.1);
 		position: sticky;
 		top: 0;
@@ -47,6 +48,7 @@ main {
 		z-index: 100;
 		background-color: var(--beige-blur);
 		backdrop-filter: blur(10px);
+		width: 100%;
 		/* color: var(--red-orange); */
 		/* background-color: var(--nav-bg);
 		border-radius: 10px;
