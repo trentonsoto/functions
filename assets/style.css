@@ -138,7 +138,13 @@ button {
 	align-items: center;
 }
 
+.arrow {
+	transition: transform 0.1s ease;
+}
 
+.expanded .arrow {
+	transform: rotate(180deg);
+}
 
 
 #create-song, #view-songs {
