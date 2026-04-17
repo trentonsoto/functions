@@ -114,6 +114,13 @@ form textarea {
 	min-height: calc(var(--spacing)*10);
 }
 
+.optional {
+	/* font-size: calc(var(--paragraph-size)/1.1); */
+	opacity: 0.8;
+	font-weight: 400;
+}
+
+
 /* input::placeholder {
 	color: var(--muted-pink);
 } */
