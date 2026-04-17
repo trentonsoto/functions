@@ -212,6 +212,11 @@ button {
 	max-width: 100%;
 	/* box-shadow: 1rem 1rem 1rem #000; */
 	/* border: 1px solid var(--charcoal); */
+
+	&:hover {
+		border-color: var(--red-orange);
+		border: 1px solid var(--red-orange);
+	}
 	
 }
 
