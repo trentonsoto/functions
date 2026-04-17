@@ -112,8 +112,8 @@ function showSongs () {
 		<div class="song-information">
 			<p>${song.genre}</p> <p>${song.beat}</p> <p>${song.lyrics}</p>
 		</div>
-		<button onClick="editSong(${song.id})">Edit</button>
-		<button onClick="openModal(${song.id})">Delete</button>
+		<button class="edit-button" onClick="editSong(${song.id})">Edit Song</button>
+		<button class="delete-button" onClick="openModal(${song.id})">Delete Song</button>
 		</div>
 		`
 		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
