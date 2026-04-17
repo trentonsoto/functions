@@ -99,34 +99,32 @@ form input, form textarea, form select {
 	color: var(--muted-pink);
 } */
 
-#form-buttons {
-	gap: calc(var(--spacing) * 1.5);
-	display: flex;
-}
-
-button.reset {
-	background-color: transparent;
-	color: var(--light-orange);
+button {
+	font-family: var(--font-family);
+	font-size: var(--paragraph-size);
 	cursor: pointer;
-	border: 1px solid var(--light-orange);
+	border-radius: var(--spacing);
 	padding-inline: calc(var(--spacing)*0.5);
 	padding-block: calc(var(--spacing)*0.5);
-	border-radius: var(--spacing);
+	border: none;
+
+}
+
+.edit-button, button.reset {
+	background-color: transparent;
+	color: var(--light-orange);
+	border: 1.5px solid var(--light-orange);
 
 	&:hover {
 		color: var(--red-orange);
-		border: 1.5px solid var(--red-orange);
+		border-color: 1.5px solid var(--red-orange);
 		font-weight: 600;
 	}
 }
 
-button.submit {
+.delete-button, button.submit {
 	background-color: var(--light-orange);
 	color: var(--beige);
-	cursor: pointer;
-	padding-inline: calc(var(--spacing)*0.5);
-	padding-block: calc(var(--spacing)*0.5);
-	border-radius: var(--spacing);
 
 	&:hover {
 		background-color: var(--red-orange);
@@ -134,6 +132,12 @@ button.submit {
 	}
 }
 
+
+#create-song, #view-songs {
+	background-color: transparent;
+	color: var(--charcoal);
+	border: 1px solid var(--charcoal);
+}
 
 
 .title {
