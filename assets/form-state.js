@@ -107,7 +107,10 @@ function showSongs () {
 		// this will look through my songs and display them one by one
 		songList.innerHTML += `
 		<div class="song-entry" onClick="expandedSong(this)">
+		<div class="song-title">
 		<h3>${song.title}</h3>
+		<i class="arrow">▾</i>
+		</div>
 		<p>${song.date}</p>
 		<div class="song-information">
 			<p>${song.genre}</p> <p>${song.beat}</p> <p>${song.lyrics}</p>
