@@ -214,6 +214,7 @@ button {
 		font-weight: 500;
 		/* margin-block-start: 0; */
 		margin: 0;
+		padding-inline: var(--spacing);
 	}
 }
 
@@ -291,7 +292,8 @@ footer {
 		}
 		p {
 			font-size: calc(var(--paragraph-size)*1.25);
-			padding: calc(var(--spacing)*2.5);
+			padding-inline: calc(var(--spacing)*2.5);
+			/* padding: calc(var(--spacing)*2.5); */
 		}
 	}
 }
