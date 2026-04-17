@@ -15,6 +15,7 @@
 	--charcoal: #121212;
 	--nav-bg: #d3d3d3;
 	--light-orange: #ed7014;
+	--background-color: #f1f3ea;
 }
 
 body {
@@ -81,7 +82,7 @@ main {
 /* FORM */
 form {
 	/* background-color: var(--nav-bg); */
-	background-color: #f1f3ea;
+	background-color: var(--background-color);
 	border-radius: calc(var(--spacing) / 2);
 	display: grid;
 	gap: var(--spacing);
@@ -220,7 +221,10 @@ button {
 
 
 .hidden {
-	display: none;
+	display: none !important;
+	/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/important */
+	/* https://docs.google.com/document/d/1wftl5TVUsG03gS0FWFUqJVDPDQ1xkglMw95gM7fPLIk/edit?usp=sharing */
+	/* I am not sure if this was on the course site — !important – but after chat explained that the display:grid is overriding the hidden class, I needed something that was specific, so I found the important rule on MDN */
 }
 
 .song-information {
@@ -238,6 +242,7 @@ button {
 	margin-block-end: 1rem;
 	max-width: 100%;
 	color: var(--charcoal);
+	background-color: var(--background-color);
 
 	&:hover {
 		border-color: var(--red-orange);
@@ -296,6 +301,12 @@ footer {
 			/* padding: calc(var(--spacing)*2.5); */
 		}
 	}
+
+	#saved-songs {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--spacing);
+	}
 }
 
 
@@ -309,5 +320,12 @@ footer {
 		padding: calc(var(--spacing)*3);
 		/* margin: calc(var(--spacing)*3); */
 	}
+
+	#saved-songs {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--spacing);
+	}
+
 }
 
