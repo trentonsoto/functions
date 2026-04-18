@@ -33,7 +33,7 @@ main {
 
 	#toggle-buttons {
 		display: flex;
-		gap: var(--spacing);
+		gap: calc(var(--spacing)*2);
 		justify-content: center;
 		/* margin-block-end: calc(var(--spacing) * 2); */
 		margin-block-start: var(--spacing);
