@@ -225,6 +225,13 @@ dialog {
 	bottom: 0; */
 }
 
+#create-song.active, #view-songs.active {
+	color: var(--red-orange);
+	font-weight: 600;
+	border-color: var(--red-orange);
+}
+
+
 .hidden {
 	display: none !important;
 	/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/important */
