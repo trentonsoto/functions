@@ -180,7 +180,7 @@ button {
 
 #enter-state {
 	display: grid;
-	gap: var(--spacing);;
+	gap: var(--spacing);
 	min-height: 20vh;
 	text-align: center;
 	justify-content: center;
