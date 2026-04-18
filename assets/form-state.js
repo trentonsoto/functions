@@ -43,6 +43,8 @@ viewButton.addEventListener('click', () => {
 	formElement.classList.add('hidden')
 	// enterState.classList.add('hidden')
 	songList.classList.remove('hidden')
+	viewButton.classList.add('active')
+	createButton.classList.remove('active')
 })
 createButton.addEventListener('click', () => {
 	// SHOW FORM
@@ -55,6 +57,8 @@ createButton.addEventListener('click', () => {
 	formElement.classList.remove('hidden')
 	// enterState.classList.remove('hidden')
 	songList.classList.add('hidden')
+	createButton.classList.add('active')
+	viewButton.classList.remove('active')
 })
 
 
