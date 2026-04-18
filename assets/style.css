@@ -229,6 +229,10 @@ button {
 
 .song-information {
 	display: none;
+
+	p {
+		white-space: pre-wrap;
+	}
 }
 
 .expanded .song-information {
@@ -243,6 +247,7 @@ button {
 	max-width: 100%;
 	color: var(--charcoal);
 	background-color: var(--background-color);
+	border-radius: calc(var(--spacing) / 2);
 
 	&:hover {
 		border-color: var(--red-orange);
@@ -306,6 +311,7 @@ footer {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: var(--spacing);
+		align-items: start;
 	}
 }
 
@@ -325,6 +331,7 @@ footer {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: var(--spacing);
+		align-items: start;
 	}
 
 }
