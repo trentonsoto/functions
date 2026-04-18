@@ -41,7 +41,7 @@ viewButton.addEventListener('click', () => {
 	// enterState.style.display = 'none'
 	// songList.style.display = 'block'
 	formElement.classList.add('hidden')
-	enterState.classList.add('hidden')
+	// enterState.classList.add('hidden')
 	songList.classList.remove('hidden')
 })
 createButton.addEventListener('click', () => {
@@ -53,7 +53,7 @@ createButton.addEventListener('click', () => {
 	// enterState.style.display = 'block'
 	// songList.style.display = 'none'
 	formElement.classList.remove('hidden')
-	enterState.classList.remove('hidden')
+	// enterState.classList.remove('hidden')
 	songList.classList.add('hidden')
 })
 
@@ -99,6 +99,15 @@ function showSongs () {
 	let songs = getSongs()
 	// let songList=document.querySelector('#saved-songs')
 	// this will show where to put the songs on the page
+		if (songs.length === 0) {
+ 		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length
+    	// using a length property to have this information display only when there aren't any songs in the local storage, so like an entrance state for a user
+		enterState.classList.remove('hidden')
+	}
+	else {
+		enterState.classList.add('hidden')
+ 		// https://www.youtube.com/watch?v=jXlWW6ppq1g
+	}
 	if (!songList) return;
 	// this will prevent an error if no elements on are on the page
 	songList.innerHTML = ''
