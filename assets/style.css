@@ -118,9 +118,6 @@ form textarea {
 }
 
 
-/* input::placeholder {
-	color: var(--muted-pink);
-} */
 
 button {
 	font-family: var(--font-family);
@@ -156,6 +153,7 @@ button {
 }
 
 .song-header {
+	/* title within the .songs-entry class in the showSongs function */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -235,18 +233,20 @@ dialog {
 }
 
 .song-information {
+	/* genre, beat, & lyrics within the .song-entry class in the showSongs function */
 	display: none;
-
 	p {
 		white-space: pre-wrap;
 	}
 }
 
 .expanded .song-information {
+	/* genre, beat, & lyrics within the .song-entry class in the showSongs function */
 	display: block;
 }
 
 .song-entry {
+	/* declared class in the showSongs function */
 	border: 1px solid var(--charcoal);
 	padding: 1em;
 	cursor: pointer;
@@ -275,6 +275,7 @@ dialog {
 	}
 
 }
+
 .expanded .edit-button, .expanded .delete-button {
 	display: inline-block;
 	margin-top: var(--spacing);
