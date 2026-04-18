@@ -219,6 +219,17 @@ button {
 	}
 }
 
+dialog {
+	/* position: absolute; */
+	/* align-self: center; */
+	margin: auto;
+	padding: var(--spacing);
+	border: 1px solid var(--charcoal);
+	/* top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0; */
+}
 
 .hidden {
 	display: none !important;
