@@ -1,4 +1,3 @@
-/* Some basics to make it easier to read. */
 :root {
 	--spacing: 1em;
 	--font-family: "area-variable", sans-serif;
@@ -20,7 +19,6 @@
 
 body {
 	background-color: var(--beige);	
-	/* background-color: var(--charcoal); */
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
@@ -29,7 +27,6 @@ body {
 main {
 	display: grid;
 	gap: var(--spacing);
-	/* margin: initial; */
 	padding: var(--spacing);
 	font-family: var(--font-family);
 	/* overflow: visible; */
@@ -81,7 +78,6 @@ main {
 
 /* FORM */
 form {
-	/* background-color: var(--nav-bg); */
 	background-color: var(--background-color);
 	border-radius: calc(var(--spacing) / 2);
 	display: grid;
