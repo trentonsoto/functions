@@ -48,16 +48,6 @@ main {
 		background-color: var(--beige-blur);
 		backdrop-filter: blur(10px);
 		width: 100%;
-		/* color: var(--red-orange); */
-		/* background-color: var(--nav-bg);
-		border-radius: 10px;
-		padding: calc(var(--spacing) * 0.5); */
-
-		/* #toggle-buttons button {
-			background: transparent;
-			border: none;
-			padding: calc(var(--spacing) * 2);
-		} */
 
 		#create-song:hover {
 			color: var(--red-orange);
@@ -68,11 +58,6 @@ main {
 			color: var(--red-orange);
 			font-weight: 600;
 		}
-
-
-		/* .active {
-			color: var(--red-orange);
-		} */
 	}
 }
 
