@@ -129,12 +129,14 @@ function showSongs () {
 			<div class="song-information">
 				<p>${song.genre}</p> <p>${song.beat}</p> <p>${song.lyrics}</p>
 			</div>
-			<button class="edit-button" onClick="editSong(${song.id})">Edit Song</button>
-			<button class="delete-button" onClick="openModal(${song.id})">Delete Song</button>
+			<div class="song-buttons">
+				<button class="edit-button" onClick="editSong(${song.id})">Edit Song</button>
+				<button class="delete-button" onClick="openModal(${song.id})">Delete Song</button>
+			</div>
 			<div class="delete-confirmation" style="display:none">
 				<p>Are you sure?</p>
-				<button id="confirm-delete">Yes, delete it</button>
-				<button id="close-delete-modal">No, keep it</button>
+				<button class="confirm-delete">Yes, delete it</button>
+				<button class="close-delete-modal">No, keep it</button>
 			</div>
 		</div>
 		`
@@ -150,6 +152,13 @@ function showSongs () {
 	// songList.classList.add('hidden')
 	// WILL COME BACK TO THIS WHEN THE TIME IS RIGHT. STILL NOT SURE ABOUT THIS ONE. MIGHT NEED TO REWRITE IT TO BE MORE SPECIFIC ABOUT WHAT IT IS SHOWING.
 }
+
+function showConfirmation (button) {
+	let specificConfirmation=document.querySelector('.song-entry')
+	let confirm=specificConfirmation.querySelector('.delete-confirmation')
+	let choices=specificConfirmation.querySelector('.song-buttons')
+}
+
 
 function expandedSong (card) {
 	card.classList.toggle('expanded')
