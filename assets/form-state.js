@@ -131,6 +131,11 @@ function showSongs () {
 			</div>
 			<button class="edit-button" onClick="editSong(${song.id})">Edit Song</button>
 			<button class="delete-button" onClick="openModal(${song.id})">Delete Song</button>
+			<div class="delete-confirmation" style="display:none">
+				<p>Are you sure?</p>
+				<button id="confirm-delete">Yes, delete it</button>
+				<button id="close-delete-modal">No, keep it</button>
+			</div>
 		</div>
 		`
 		// the arrow is from Lucy
