@@ -35,9 +35,7 @@ main {
 		display: flex;
 		gap: calc(var(--spacing)*2);
 		justify-content: center;
-		/* margin-block-end: calc(var(--spacing) * 2); */
 		margin-block-start: var(--spacing);
-		/* margin-inline: calc(var(--spacing)*-1); */
 		padding-block: calc(var(--spacing)*1.1);
 		position: sticky;
 		top: 0;
@@ -68,13 +66,11 @@ form {
 	display: grid;
 	gap: var(--spacing);
 	padding: var(--spacing);
-	/* margin: calc(var(--spacing) / 2); */
-
 }
+
 form label {
 	display: flex;
 	flex-direction: column;
-	/* gap: calc(var(--spacing) * 20); */
 	font-size: var(--paragraph-size);
 	padding-block-end: var(--spacing);
 	font-weight: 500;
