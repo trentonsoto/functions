@@ -263,17 +263,25 @@ dialog {
 		opacity: 0.8;
 	}
 
-	.edit-button, .delete-button {
+	/* .edit-button, .delete-button {
 		display: none;
-	}
+	} */
 
 }
 
-.expanded .edit-button, .expanded .delete-button {
+/* .expanded .edit-button, .expanded .delete-button {
+	display: inline-block;
+	margin-top: var(--spacing);
+} */
+
+.song-buttons .edit-button, .song-buttons .delete-button {
+	display: none;
+}
+
+.expanded .song-buttons .edit-button, .expanded .song-buttons .delete-button {
 	display: inline-block;
 	margin-top: var(--spacing);
 }
-
 
 footer {
 	padding: var(--spacing);
