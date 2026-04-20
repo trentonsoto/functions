@@ -135,8 +135,8 @@ function showSongs () {
 			</div>
 			<div class="delete-confirmation hidden">
 				<p>Are you sure?</p>
-				<button class="confirm-delete" onClick="deleteSong(${song.id})">Yes, delete it</button>
-				<button class="close-delete-modal" onClick="hideConfirmation(this)">No, keep it</button>
+				<button class="confirm-delete delete-button" onClick="deleteSong(${song.id})">Yes, delete it</button>
+				<button class="close-delete-modal edit-button" onClick="hideConfirmation(this)">No, keep it</button>
 			</div>
 		</div>
 		`
