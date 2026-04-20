@@ -131,12 +131,12 @@ function showSongs () {
 			</div>
 			<div class="song-buttons">
 				<button class="edit-button" onClick="editSong(${song.id})">Edit Song</button>
-				<button class="delete-button" onClick="openModal(${song.id})">Delete Song</button>
+				<button class="delete-button" onClick="showConfirmation(this)">Delete Song</button>
 			</div>
-			<div class="delete-confirmation" style="display:none">
+			<div class="delete-confirmation hidden">
 				<p>Are you sure?</p>
-				<button class="confirm-delete">Yes, delete it</button>
-				<button class="close-delete-modal">No, keep it</button>
+				<button class="confirm-delete" onClick="deleteSong(${song.id})">Yes, delete it</button>
+				<button class="close-delete-modal" onClick="hideConfirmation(this)">No, keep it</button>
 			</div>
 		</div>
 		`
@@ -157,6 +157,18 @@ function showConfirmation (button) {
 	let specificConfirmation=document.querySelector('.song-entry')
 	let confirm=specificConfirmation.querySelector('.delete-confirmation')
 	let choices=specificConfirmation.querySelector('.song-buttons')
+
+	choices.classList.add('hidden')
+	confirm.classList.remove('hidden')
+}
+
+function hideConfirmation (button) {
+	let specificConfirmation=document.querySelector('.song-entry')
+	let confirm=specificConfirmation.querySelector('.delete-confirmation')
+	let choices=specificConfirmation.querySelector('.song-buttons')
+
+	confirm.classList.add('hidden')
+	choices.classList.remove('hidden')
 }
 
 
@@ -225,30 +237,30 @@ function deleteSong(songID) {
 
 
 // MODAL FOR DELETE CONFIRMATION 
-let modalDelete=document.querySelector('#delete-modal')
-//this targets the delete modal I created in the HTML (inside the dialog tag)
-let confirmButton=document.querySelector('#confirm-delete')
-// this targets the YES delete button in the modal
-let closeButton=document.querySelector('#close-delete-modal')
-//this targets the NO keep button in the modal
+// let modalDelete=document.querySelector('#delete-modal')
+// //this targets the delete modal I created in the HTML (inside the dialog tag)
+// let confirmButton=document.querySelector('#confirm-delete')
+// // this targets the YES delete button in the modal
+// let closeButton=document.querySelector('#close-delete-modal')
+// //this targets the NO keep button in the modal
 
-function openModal(songID) {
-	songDeleted=songID
-	// this can save the ID of the song so it knows which song is being deleted and this is similar to the delete function
-	modalDelete.showModal() 
-	// this will open the modal
-}
-// this function will open the modal for me
+// function openModal(songID) {
+// 	songDeleted=songID
+// 	// this can save the ID of the song so it knows which song is being deleted and this is similar to the delete function
+// 	modalDelete.showModal() 
+// 	// this will open the modal
+// }
+// // this function will open the modal for me
 
-confirmButton.addEventListener('click', () => {
-deleteSong(songDeleted)
-modalDelete.close()
-})
-// this will run the delete function and then can close the modal once it is deleted 
+// confirmButton.addEventListener('click', () => {
+// deleteSong(songDeleted)
+// modalDelete.close()
+// })
+// // this will run the delete function and then can close the modal once it is deleted 
 
-closeButton.addEventListener('click', () => {
-modalDelete.close()
-})
+// closeButton.addEventListener('click', () => {
+// modalDelete.close()
+// })
 // this will close the modal if NO keep is clicked from the modal
 
 
