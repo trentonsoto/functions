@@ -294,6 +294,19 @@ footer {
 	/* word-spacing: calc(var(--spacing)/2.5); */
 }
 
+.delete-confirmation {
+	margin-block-start: var(--spacing);
+	/* display: grid; */
+	align-items: center;
+	gap: var(--spacing);
+
+	p {
+		margin-block-end: var(--spacing);
+		font-weight: 600;
+	}
+	
+}
+
 
 /* TABLET BREAKPOINT */
 @media (min-width: 768px) {
