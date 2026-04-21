@@ -154,7 +154,7 @@ function showSongs () {
 }
 
 function showConfirmation (button) {
-	let specificConfirmation=closest('.song-entry')
+	let specificConfirmation=button.closest('.song-entry')
 	let confirm=specificConfirmation.querySelector('.delete-confirmation')
 	let choices=specificConfirmation.querySelector('.song-buttons')
 
@@ -163,7 +163,7 @@ function showConfirmation (button) {
 }
 
 function hideConfirmation (button) {
-	let specificConfirmation=closest('.song-entry')
+	let specificConfirmation=button.closest('.song-entry')
 	let confirm=specificConfirmation.querySelector('.delete-confirmation')
 	let choices=specificConfirmation.querySelector('.song-buttons')
 
