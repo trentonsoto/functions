@@ -124,12 +124,12 @@ function showSongs () {
 		songList.innerHTML += `
 		<div class="song-entry" onClick="expandedSong(this)">
 			<div class="song-header">
-			<h3>${song.title}</h3>
+			<h3><strong>Title:</strong> ${song.title}</h3>
 			<i class="arrow">▾</i>
 			</div>
-			<p>${song.date}</p>
+			<p><strong>Date:</strong> ${song.date}</p>
 			<div class="song-information">
-				<p>${song.genre}</p> <p>${song.beat}</p> <p>${song.lyrics}</p>
+				<p><strong>Genre:</strong> ${song.genre}</p> <p><strong>Beat:</strong> ${song.beat}</p> <p><strong>Lyrics:</strong> ${song.lyrics}</p>
 			</div>
 			<div class="song-buttons">
 				<button class="edit-button" onClick="editSong(${song.id})">Edit Song</button>
