@@ -6,6 +6,7 @@
 		<!-- I found this meta tag in MDN, so I added it and am going to test if this works -->
         <title>Songvault</title>
 		<link href="icons/favicon.ico" rel="icon" sizes="any">
+		<link href="icons/favicon.svg" rel="icon" type="image/svg+xml">
 		<link href="icons/touch.png"  rel="apple-touch-icon">
 		<meta property="description" content="A home for your songs. Store, organize, and&nbsp;revisit your ideas whenever inspiration hits. Each entry keeps your creative process organized.">
 		<link href="assets/reset.css" rel="stylesheet">
@@ -17,7 +18,6 @@
     <body>
 		<main>
 			<div id="toggle-buttons">
-				<!-- <button id="create-song" class="button active">Create Songs</button> -->
 				<button id="create-song" class="active">Create Songs</button>
 				<button id="view-songs">View Songs</button>
 			</div>
@@ -25,16 +25,11 @@
 			<div id="enter-state">
 				<div class="title">
 					<h1 class="title-top">Songvault</h1>
-					<!-- <h1 class="title-bottom">Architecture Tool</h1> -->
 				</div>
 				<p>A home for your songs. Store, organize, and revisit your ideas whenever inspiration hits. Each entry keeps your creative process organized.</p>
 			</div>
-			<!-- <p>Get started</p> -->
-			<!-- New element, who dis: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form -->
 
 			<div id="saved-songs" class="hidden"></div>
-			<!-- songList.classList.add('hidden') -->
-			<!-- I removed this line from js because I switched to adding and removing classes instead of the display code. Then I needed to add the class to this div because the songs were displaying when I first load the page, but since I switched my code to reflect class materials more closely, I needed to add this class here to do the same thing that one line of js did in my showSongs function -->
 
 			<form id="some-form">
 				<section id="form-title">
