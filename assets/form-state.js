@@ -9,19 +9,12 @@ let formElement = document.querySelector('#some-form')
 // I added this because of an error code in my devtools. I will come back to this later, but I needed to get this out the way to make sure my sessions are saved locally.
 
 
-// comments for me to remember 
 // getSongs fetches from local storage
 // saveSongs saves to local storage
 // showSongs shows the songs on the page
 // deleteSongs will delete (when I create this function)
 // editSongs will edit (when I create this function)
-// other things to do 
-// (1: get rid of the navigation at the top) DONE ***************
-// (2: use the now added space to explain what my product is) 
-// (3: i don't need all the input fields to show up right away, maybe they show up one by one as the user types into the field) 
-// (4: make the user not be able to press "submit" until they have filled out all the fields) 
-// (5: maybe keep the input form sticky in the viewport so it is always there and the list of songs scroll behind it) 
-// check M. D. E. comments!
+
 
 let songList=document.querySelector('#saved-songs')
 let enterState=document.querySelector('#enter-state')
@@ -36,12 +29,7 @@ viewButton.addEventListener('click', () => {
 	// HIDE FORM
 	// HIDE ENTRANCE STATE 
 	// SHOW SONGS
-	// this is from your tips in how to handle a big task
-	// formElement.style.display = 'none'
-	// enterState.style.display = 'none'
-	// songList.style.display = 'block'
 	formElement.classList.add('hidden')
-	// enterState.classList.add('hidden')
 	songList.classList.remove('hidden')
 	viewButton.classList.add('active')
 	createButton.classList.remove('active')
@@ -51,12 +39,7 @@ createButton.addEventListener('click', () => {
 	// SHOW FORM
 	// SHOW ENTRANCE STATE 
 	// HIDE SONGS
-	// this is from your tips in how to handle a big task
-	// formElement.style.display = 'block'
-	// enterState.style.display = 'block'
-	// songList.style.display = 'none'
 	formElement.classList.remove('hidden')
-	// enterState.classList.remove('hidden')
 	songList.classList.add('hidden')
 	createButton.classList.add('active')
 	viewButton.classList.remove('active')
@@ -198,25 +181,6 @@ function editSong (songID) {
 	// I need this so when the event listener is clicked, it will know which song to edit 
 }
 
-// I commented this out because I don't think I need it right now, but I will revisit it later if I need to come back to it. I currently have the enterState in the first few lines of this file, so I am using that to track the listening event
-// function entrance () {
-// 	let songs = getSongs()
-// 	// let enterState=document.querySelector('#enter-state')
-// 	if (songs.length === 0) {
-// 		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length
-// 		// using a length property to have this information display only when there aren't any songs in the local storage, so like an entrance state for a user
-// 		// enterState.style.display='block'
-// 		enterState.classList.remove('hidden')
-// 	}
-// 	else {
-// 		// enterState.style.display='none'
-// 		enterState.classList.add('hidden')
-// 		// https://www.youtube.com/watch?v=jXlWW6ppq1g
-// 		// this video helped explain the concept of block and none for display, when hiding and showing elements on the screen. 
-// 		// the way I wrote this is when there are no songs, the entrance state will show, but when a song is added, the state will disappear because the songs show now
-// 	}
-// }
-
 
 
 
@@ -235,36 +199,6 @@ function deleteSong(songID) {
 
 	showSongs()
 }
-
-
-
-// MODAL FOR DELETE CONFIRMATION 
-// let modalDelete=document.querySelector('#delete-modal')
-// //this targets the delete modal I created in the HTML (inside the dialog tag)
-// let confirmButton=document.querySelector('#confirm-delete')
-// // this targets the YES delete button in the modal
-// let closeButton=document.querySelector('#close-delete-modal')
-// //this targets the NO keep button in the modal
-
-// function openModal(songID) {
-// 	songDeleted=songID
-// 	// this can save the ID of the song so it knows which song is being deleted and this is similar to the delete function
-// 	modalDelete.showModal() 
-// 	// this will open the modal
-// }
-// // this function will open the modal for me
-
-// confirmButton.addEventListener('click', () => {
-// deleteSong(songDeleted)
-// modalDelete.close()
-// })
-// // this will run the delete function and then can close the modal once it is deleted 
-
-// closeButton.addEventListener('click', () => {
-// modalDelete.close()
-// })
-// this will close the modal if NO keep is clicked from the modal
-
 
 
 // Watch for events!
@@ -323,9 +257,6 @@ formElement.addEventListener('submit', (event) => {
 	// saveSongs(mySongs)
 	// // with new entries, this will update the list for me and place it back into local storage 
 	// showSongs()
-	// formElement.style.display = 'none'
-	// enterState.style.display = 'none'
-	// songList.style.display = 'block'
 	formElement.classList.add('hidden')
 	enterState.classList.add('hidden')
 	songList.classList.remove('hidden')
