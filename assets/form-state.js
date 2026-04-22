@@ -93,6 +93,7 @@ function showSongs () {
     	// using a length property to have this information display only when there aren't any songs in the local storage, so like an entrance state for a user
 		enterState.classList.remove('hidden')
 		formElement.classList.remove('hidden')
+		document.querySelector('footer').classList.remove('hidden')
 	}
 	else {
 		enterState.classList.add('hidden')
