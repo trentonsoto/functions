@@ -5,8 +5,7 @@
 
 // Target your form.
 let formElement = document.querySelector('#some-form')
-// let stateCallback = undefined
-// I added this because of an error code in my devtools. I will come back to this later, but I needed to get this out the way to make sure my sessions are saved locally.
+
 
 
 // getSongs fetches from local storage
@@ -134,9 +133,7 @@ function showSongs () {
 		// for each song and its entry and information, this button is added so when its clicked, the function deleteSong will know which song to delete based on the id created and used here "song.id"
 		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
 	})
-	// songList.style.display = 'none'
-	// songList.classList.add('hidden')
-	// WILL COME BACK TO THIS WHEN THE TIME IS RIGHT. STILL NOT SURE ABOUT THIS ONE. MIGHT NEED TO REWRITE IT TO BE MORE SPECIFIC ABOUT WHAT IT IS SHOWING.
+	
 }
 
 function showConfirmation (button) {
