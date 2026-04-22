@@ -248,6 +248,7 @@ dialog {
 	color: var(--charcoal);
 	background-color: var(--background-color);
 	border-radius: calc(var(--spacing) / 2);
+	/* gap: var(--spacing); */
 
 	&:hover {
 		border-color: var(--red-orange);
@@ -256,11 +257,20 @@ dialog {
 
 	h3 {
 		font-size: calc(var(--paragraph-size)*1.25);
+		padding-block-end: var(--spacing);
+		opacity: 0.8;
+
 	}
 	
 	p {
 		font-size: calc(var(--paragraph-size)/1.1);
 		opacity: 0.8;
+		padding-block: calc(var(--spacing)/2);
+	}
+
+	strong {
+		font-weight: 600;
+		color: var(--red-orange);
 	}
 
 	/* .edit-button, .delete-button {
