@@ -45,6 +45,7 @@ viewButton.addEventListener('click', () => {
 	songList.classList.remove('hidden')
 	viewButton.classList.add('active')
 	createButton.classList.remove('active')
+	document.querySelector('footer').classList.add('hidden')
 })
 createButton.addEventListener('click', () => {
 	// SHOW FORM
@@ -59,6 +60,7 @@ createButton.addEventListener('click', () => {
 	songList.classList.add('hidden')
 	createButton.classList.add('active')
 	viewButton.classList.remove('active')
+	document.querySelector('footer').classList.remove('hidden')
 })
 
 
@@ -327,6 +329,7 @@ formElement.addEventListener('submit', (event) => {
 	formElement.classList.add('hidden')
 	enterState.classList.add('hidden')
 	songList.classList.remove('hidden')
+	document.querySelector('footer').classList.add('hidden')
 	// this will show all the songs on the page for me
 	// shows whenever I submit a new song
 	// I added these three lines of code from up above because when a user clicks submit, I want the view to switch to the "view songs" page to see the entry instead of clearing the form and leaving it like that
