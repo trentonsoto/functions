@@ -195,15 +195,9 @@ button {
 }
 
 dialog {
-	/* position: absolute; */
-	/* align-self: center; */
 	margin: auto;
 	padding: var(--spacing);
 	border: 1px solid var(--charcoal);
-	/* top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0; */
 }
 
 #create-song.active, #view-songs.active {
@@ -272,17 +266,8 @@ dialog {
 		font-weight: 600;
 		color: var(--red-orange);
 	}
-
-	/* .edit-button, .delete-button {
-		display: none;
-	} */
-
 }
 
-/* .expanded .edit-button, .expanded .delete-button {
-	display: inline-block;
-	margin-top: var(--spacing);
-} */
 
 .song-buttons .edit-button, .song-buttons .delete-button {
 	display: none;
@@ -315,7 +300,6 @@ footer {
 		margin-block-end: var(--spacing);
 		font-weight: 600;
 	}
-	
 }
 
 
